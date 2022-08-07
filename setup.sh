@@ -9,6 +9,15 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
        #aur=rar
     else
        sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller device-tree-compiler liblzma-dev python-pip brotli liblz4-tool gawk aria2
+       sudo apt update
+       sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev curl software-properties-common
+       sudo apt purge -y python2.7-minimal
+       wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tar.xz
+       sudo tar -xf Python-3.7.0.tar.xz
+       cd Python-3.7.0
+       sudo ./configure
+       sudo make altinstall
+       python3.7 --version
     fi
     pip install backports.lzma protobuf pycrypto
 elif [[ "$OSTYPE" == "darwin"* ]]; then
