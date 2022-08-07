@@ -18,9 +18,3 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
        sudo ./configure
        sudo make altinstall
        python3.7 --version
-    fi
-    pip install backports.lzma protobuf pycrypto
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    brew install protobuf xz brotli lz4 aria2
-    pip install backports.lzma protobuf pycrypto
-fi
