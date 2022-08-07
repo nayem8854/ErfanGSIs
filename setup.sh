@@ -18,3 +18,5 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
        sudo ./configure
        sudo make altinstall
        python3.7 --version
+   fi
+fi
